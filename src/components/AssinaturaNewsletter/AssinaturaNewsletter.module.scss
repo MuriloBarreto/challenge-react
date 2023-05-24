@@ -1,0 +1,83 @@
+.newsLetter {
+  background-color: #ffe29a;
+  padding: 16px;
+  position: relative;
+  margin-top: 20px;
+  @media (min-width: 920px) {
+    margin-top: -45px;
+    background-color: transparent;
+    &:after {
+      content: "";
+      display: block;
+      width: 787px;
+      height: 975px;
+      background-image: url("../../assets/imagem-hero 1.png");
+      position: absolute;
+      --baseDistance: -80px;
+      top: calc(var(--baseDistance) + 50px);
+      right: 0;
+      z-index: -1;
+      pointer-events: none;
+    }
+  }
+  &__titulo {
+    margin-top: 150px;
+    max-width: 481px;
+    margin-bottom: 32px;
+    h1 {
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 26px;
+      color: #202020;
+      strong {
+        font-family: "Elsie Swash Caps", cursive;
+        font-weight: 900;
+        font-size: 82px;
+        line-height: 94px;
+        display: block;
+      }
+    }
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 26px;
+      text-align: left;
+      color: #202020;
+    }
+  }
+  img {
+    width: 787px;
+    height: 975px;
+  }
+  form {
+    display: flex;
+    width: 50%;
+    input {
+      padding: 27px;
+      padding-left: 150px;
+      flex: 1;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0em;
+      text-align: left;
+      background-image: url("../../assets/mail.png");
+      background-repeat: no-repeat;
+      background-position: 16px center;
+      outline-color: #ffcb47;
+      box-shadow: 10px 10px 30px 0px #0000000f;
+      border: 0;
+    }
+    button {
+      border-radius: 0px;
+      color: #fff;
+      width: 100%;
+      background-color: #ffcb47;
+      padding: 27px;
+      box-shadow: 10px 10px 30px 0px #ffcb474d;
+      border: 0;
+      cursor: pointer;
+    }
+  }
+}
