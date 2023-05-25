@@ -2,48 +2,60 @@
   background-color: #ffe29a;
   padding: 16px;
   position: relative;
-  margin-top: 20px;
+  // margin-top: 20px;
   @media (min-width: 920px) {
-    margin-top: -45px;
+    // margin-top: -70px;
     background-color: transparent;
     &:after {
       content: "";
       display: block;
       width: 787px;
-      height: 975px;
+      height: 970px;
       background-image: url("../../assets/imagem-hero 1.png");
       position: absolute;
-      --baseDistance: -80px;
+      --baseDistance: -150px;
       top: calc(var(--baseDistance) + 50px);
-      right: 0;
+      right: 70px;
       z-index: -1;
       pointer-events: none;
     }
   }
-  &__titulo {
-    margin-top: 150px;
+  &__container {
+    margin-top: 120px;
     max-width: 481px;
-    margin-bottom: 32px;
     h1 {
       font-weight: 400;
       font-size: 22px;
-      line-height: 26px;
-      color: #202020;
+      line-height: 27px;
+      margin-bottom: 12px;
+      color: rgba(0,0,0,.5);
       strong {
         font-family: "Elsie Swash Caps", cursive;
+        color: black;
         font-weight: 900;
         font-size: 82px;
         line-height: 94px;
         display: block;
+        margin-bottom: 24px;
       }
     }
     p {
+
+      font-style: normal;
       font-weight: 400;
       font-size: 16px;
       line-height: 26px;
       text-align: left;
       color: #202020;
+      opacity: 0.5;
     }
+  }
+  &__error{
+    color: red;
+    margin: 0;
+    font-weight: 400;
+    margin-top: 5px;
+    font-size: 16px;
   }
   img {
     width: 787px;
@@ -52,9 +64,10 @@
   form {
     display: flex;
     width: 50%;
+
     input {
       padding: 27px;
-      padding-left: 150px;
+      padding-left: 50px;
       flex: 1;
       font-size: 16px;
       font-style: normal;
@@ -66,18 +79,23 @@
       background-repeat: no-repeat;
       background-position: 16px center;
       outline-color: #ffcb47;
-      box-shadow: 10px 10px 30px 0px #0000000f;
-      border: 0;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
+      border-right: 0;
     }
     button {
       border-radius: 0px;
       color: #fff;
-      width: 100%;
       background-color: #ffcb47;
       padding: 27px;
-      box-shadow: 10px 10px 30px 0px #ffcb474d;
+      box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
       border: 0;
       cursor: pointer;
+      &:disabled{
+        opacity: 0.8;
+        cursor: not-allowed;
+      }
     }
+   
   }
 }
