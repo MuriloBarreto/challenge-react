@@ -1,12 +1,13 @@
 import React from 'react';
-// import PlantImage from 'assets/imagem-hero 1.png';
 import { useFormik } from 'formik';
 import styles from './AssinaturaNewsletter.module.scss';
 import * as Yup from 'yup';
+import emailjs from 'emailjs-com';
 
 interface MyFormValues {
   email: string;
 }
+
 
 export default function AssinaturaNewsletter() {
   const initialValues: MyFormValues = { email: '' };
@@ -15,8 +16,25 @@ export default function AssinaturaNewsletter() {
     validationSchema: Yup.object({
       email: Yup.string().email('Não é um email valido').required('E-mail requerido')
     }),
-    onSubmit: (values: MyFormValues) => {
-      alert(`Obrigado pela sua assinatura, você receberá nossas novidades no e-mail ${values.email}`);
+    onSubmit: async (values: MyFormValues) => { 
+      const service = process.env.REACT_APP_SERVICE?? '';
+      const template = process.env.REACT_APP_TEMPLATE?? '';
+      const api = process.env.REACT_APP_API_KEY?? '';
+      try {
+        await emailjs.send(
+          service,
+          template,
+          {
+            to_email: values.email,
+            subject: 'casa verde'
+          },
+          api
+        );
+  
+        alert(`Obrigado pela sua assinatura, você receberá nossas novidades no e-mail ${values.email}`);
+      } catch (error) {
+        console.error('Erro ao enviar o e-mail:', error);
+      }
     },
   });
   return (
