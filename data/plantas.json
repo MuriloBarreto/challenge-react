@@ -1,0 +1,40 @@
+{
+  "plantas": [
+    {
+      "name": "Ajuga Reptans",
+      "preco": 20,
+      "img": "ajuga_card",
+      "ordem": 1
+    },
+    {
+      "name": "Cordyline fruticosa",
+      "preco": 35,
+      "img": "fruticosa_card",
+      "ordem": 3
+    },
+    {
+      "name": "Crassula ovata",
+      "preco": 23.2,
+      "img": "ovata_card",
+      "ordem": 2
+    },
+    {
+      "name": "Cyperus rotundus",
+      "preco": 23.2,
+      "img": "cyperus_card",
+      "ordem": 2
+    },
+    {
+      "name": "Delairea odorata",
+      "preco": 23.2,
+      "img": "delairea_card",
+      "ordem": 2
+    },
+    {
+      "name": "Datura metel",
+      "preco": 23.2,
+      "img": "datura_card",
+      "ordem": 2
+    }
+  ]
+}
